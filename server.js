@@ -834,6 +834,7 @@ app.get('/health', (req, res) => {
 // Root endpoint
 app.get('/', (req, res) => {
     const indexFile = LANDING_PAGE === 'battery' ? 'index.html' : 'index1.html';
+    console.log(`📄 Sirviendo página: ${indexFile} (LANDING_PAGE=${LANDING_PAGE})`);
     res.sendFile(path.join(__dirname, indexFile));
 });
 
