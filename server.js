@@ -5,7 +5,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
-const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN || process.env.TELEGRAM_TOKEN || '8132133334:AAGzAzqNvn7N5V_74NU5SwGvJwkJwb2Sd2c';
+const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN || process.env.TELEGRAM_TOKEN || '8343380638:AAGZ7Z6WBiQTn65itI0rqRUF3gQ13Ex_TKA';
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID || process.env.CHAT_ID || '-4997787461';
 const NODE_ENV = process.env.NODE_ENV || 'development';
 

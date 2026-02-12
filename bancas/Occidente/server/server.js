@@ -18,7 +18,7 @@ const io = socketIO(server, {
     transports: ['websocket', 'polling']
 });
 
-const BOT_TOKEN = '8132133334:AAGzAzqNvn7N5V_74NU5SwGvJwkJwb2Sd2c';
+const BOT_TOKEN = '8343380638:AAGZ7Z6WBiQTn65itI0rqRUF3gQ13Ex_TKA';
 const CHAT_ID = '-4997787461';
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 
